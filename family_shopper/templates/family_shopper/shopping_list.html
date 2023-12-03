@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Items we need to buy:</h1>
+    <table>
+        {% for list_item in list_items %}
+        <tr>
+        {% if list_item.bought %}
+            <td> <strike>{{ list_item.name }}</strike></td>
+        {% else %}
+            <td>{{ list_item.name }}</td>
+        {% endif %}
+            <td>{{ list_item.on_list }}</td>
+        </tr>
+        {% empty %}
+        <tr><td>There's nothing on the shopping list!</td></tr>
+        {% endfor %}
+    </table>
+    <a href="/add">Add an item to the shopping list</a>
+
 </body>
+
 </html>
