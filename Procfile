@@ -1,0 +1,1 @@
+web: gunicorn djamgo_family_shopper.wsgi
