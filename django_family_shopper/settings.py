@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS = ['8000-jaimehyland-familyshopp-qz3zfx6pn6g.ws-eu106.gitpod.io']
-ALLOWED_HOSTS = ['django_family_shopper.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['django_family_shopper.herokuapp.com', 'family-shopping-63489a07d9bb.herokuapp.com', 'localhost']
 
 
 # Application definition
