@@ -1,1 +1,1 @@
-web: gunicorn djamgo_family_shopper.wsgi
+web: gunicorn django_family_shopper.wsgi
