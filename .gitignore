@@ -2,7 +2,7 @@ core.Microsoft*
 core.mongo*
 core.python*
 env.py
-SuperUser_data.txt
+Notes_and_data.txt
 __pycache__/
 *.py[cod]
 node_modules/
