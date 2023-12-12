@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <h1>Items we need to buy:</h1>
+
+    <div class="row">
+
+        <div class="col-12 mt-3 left">
+            <table>
+                <div class="row">
+                    {% for list_item in list_items %}
+                    <tr>
+                        {% if list_item.bought %}
+                            <td> <strike>{{ list_item.product }}</strike></td>
+                        {% else %}
+                            <td>{{ list_item.product }}</td>
+                        {% endif %}
+                        <td>{{ list_item.date_created }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td>There's nothing on the shopping list!</td>
+                    </tr>
+                    {% endfor %}
+                </div>
+            </table>
+            <br>
+            <br>
+            <a href="/add">Add an item to the shopping list</a>
+        </div>
+    </div>
+
+</div>
+
+{%endblock%}

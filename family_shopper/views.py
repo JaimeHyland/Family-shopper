@@ -1,13 +1,11 @@
 from django.shortcuts import render
+from django.views import generic
 from .models import List_item
 
 # Create your views here.
-def get_shopping_list(request):
-    list_items = List_item.objects.all()
-    context = {
-        'list_items': list_items
-    }
-    return render(request, 'family_shopper/shopping_list.html', context)
-
-def add_item_to_list(request):
-    return render(request, 'family_shopper/add_item_to_list.html')
+class ShoppingList(generic.ListView):
+    model = List_item
+    queryset = List_item.objects.filter(bought=False).order_by('date_created')
+    context_object_name = 'list_item'
+    template_name = 'index.html'
+    paginate_by = 10

@@ -13,9 +13,9 @@
         {% for list_item in list_items %}
         <tr>
         {% if list_item.bought %}
-            <td> <strike>{{ list_item.name }}</strike></td>
+            <td> <strike>{{ list_item.product }}</strike></td>
         {% else %}
-            <td>{{ list_item.name }}</td>
+            <td>{{ list_item.product }}</td>
         {% endif %}
             <td>{{ list_item.date_created }}</td>
         </tr>

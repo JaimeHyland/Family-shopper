@@ -1,9 +1,0 @@
-SuperUser_name="Jaime"
-SuperUser_email="hylandjaime@gmail.com"
-SuperUser_password="Lily&Jim"
-
-Key buzzwords:
-MVT Architecture
-Agile Programming
-Design thinking
-
