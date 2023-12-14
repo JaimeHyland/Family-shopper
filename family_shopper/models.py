@@ -45,9 +45,9 @@ class List_item(models.Model):
     shopper_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_who_bought_item", null=True, blank=True)
     quantity_required = models.IntegerField(default=1)
     quantity_bought = models.IntegerField(default=1)
-    shop_bought = models.ForeignKey(Shop, on_delete=models.CASCADE, related_name="shop_where_item_bought")
-    creator_notes = models.TextField(default='')
-    buyer_notes = models.TextField(default='')
+    shop_bought = models.ForeignKey(Shop, on_delete=models.CASCADE, related_name="shop_where_item_bought", null=True, blank=True)
+    creator_notes = models.TextField(null=True, blank=True)
+    buyer_notes = models.TextField(null=True, blank=True)
 
     class Meta:
         ordering = ['date_created']
