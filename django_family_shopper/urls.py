@@ -5,5 +5,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Use the correct import path for the family_shopper URLs.
-    path('', include('family_shopper.urls'), name='shopper.urls')
+    path('', include('family_shopper.urls'), name='shopper.urls'),
+    path('summernote/', include('django_summernote.urls')),
 ]

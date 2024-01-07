@@ -12,15 +12,24 @@
     <table>
         {% for list_item in list_items %}
         <tr>
-        {% if list_item.bought %}
+            {% if list_item.bought %}
             <td> <strike>{{ list_item.product }}</strike></td>
-        {% else %}
-            <td>{{ list_item.product }}</td>
-        {% endif %}
-            <td>{{ list_item.date_created }}</td>
+            {% else %}
+            <td>{{ list_item.product }}</td>>#
+            {% endif %}
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+            </td>
         </tr>
         {% empty %}
-        <tr><td>There's nothing on the shopping list!</td></tr>
+        <tr>
+            <td>There's nothing on the shopping list!</td>
+        </tr>
         {% endfor %}
     </table>
     <a href="/add">Add an item to the shopping list</a>
